@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte HunterAI - Executive Narrative Report</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        primary: "#7C8DFF", // Deep Indigo for primary accent
+                        secondary: "#D4AF37", // Refined Metallic Bronze accent
+                        "background-dark": "#0A102A", // Deep dark indigo
+                        "surface-dark": "#151F40", // Slightly lighter indigo for cards
+                        "warm-gray": "#343F5C", // Subtle warm gray for text
+                        "light-gray": "#A7B0CB", // Lighter gray for less prominent text
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem", // Slightly more rounded
+                        lg: "1.25rem",
+                        xl: "2rem",
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Abstract corporate strategy image
+                        'footer-pattern': "url('https://images.unsplash.com/photo-1542744095-fcf48d80b0ae?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Different abstract image for footer
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A102A;}
+        ::-webkit-scrollbar-thumb {
+            background: #343F5C;border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7C8DFF;}
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-border {
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, var(--tw-gradient-stops));
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-light-gray font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white min-h-screen">
+<div class="relative min-h-screen">
+<div class="absolute inset-0 bg-hero-pattern bg-cover bg-center opacity-10 mix-blend-screen z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent z-10"></div>
+<main class="relative z-20 flex flex-col pt-20 pb-16 px-6 md:px-12 lg:px-24 max-w-screen-xl mx-auto">
+<header class="fixed top-0 left-0 w-full bg-background-dark/90 backdrop-blur-md z-50 py-4 px-6 md:px-12 lg:px-24 flex justify-between items-center border-b border-surface-dark shadow-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl fill-1">insights</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-xl leading-tight tracking-tight text-white font-serif">Evermonte<span class="text-secondary">.</span></span>
+<span class="text-[0.7rem] text-light-gray uppercase tracking-wider">HunterAI Report</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-light-gray hover:text-primary font-medium transition-colors" href="#">Overview</a>
+<a class="text-light-gray hover:text-primary font-medium transition-colors" href="#">Details</a>
+<a class="text-light-gray hover:text-primary font-medium transition-colors" href="#">Metrics</a>
+<a class="text-light-gray hover:text-primary font-medium transition-colors" href="#">Contacts</a>
+</nav>
+<button class="text-light-gray hover:text-primary transition-colors flex items-center gap-2 px-4 py-2 rounded-md border border-surface-dark hover:border-primary/50 text-sm">
+<span class="material-symbols-outlined text-base fill-1">download</span>
+                    Export PDF
+                </button>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 pt-16">
+<div class="flex flex-col justify-center">
+<p class="text-sm uppercase tracking-widest text-secondary font-semibold mb-3">Executive Narrative Report</p>
+<h1 class="text-6xl md:text-8xl font-serif font-bold text-white leading-tight mb-4 tracking-tighter">
+                        Strategic Talent Search
+                    </h1>
+<p class="text-lg text-light-gray max-w-xl">
+                        Comprehensive insights into the executive search for <span class="text-primary font-semibold">SAIPOS</span>, powered by advanced AI analytics.
+                    </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-center pt-8 md:pt-0">
+<div class="text-right mb-6">
+<p class="text-warm-gray text-sm uppercase tracking-wide">Client Partner</p>
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-white">SAIPOS</h2>
+</div>
+<div class="text-right">
+<p class="text-warm-gray text-sm uppercase tracking-wide">Role Profile</p>
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-white">Head of Technology</h2>
+</div>
+<div class="mt-8 flex items-center gap-4 text-sm font-medium">
+<span class="text-primary material-symbols-outlined fill-1">calendar_month</span>
+<span class="text-light-gray">Report Date: October 26, 2023</span>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<h3 class="text-4xl font-serif font-bold text-white mb-12 text-center">
+<span class="pb-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-to-r after:from-primary/0 after:via-secondary after:to-primary/0 after:rounded-full">Role Alignment Deep Dive</span>
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="glass-panel p-8 rounded-xl flex flex-col justify-between h-full bg-surface-dark shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 fill-1">corporate_fare</span>
+<h4 class="text-2xl font-serif font-semibold text-white mb-4">Executive Summary</h4>
+<p class="text-light-gray leading-relaxed text-sm">
+                                SAIPOS seeks a proactive, organized, and continuous improvement-focused professional for Support Management, with AI experience for service optimization and data structuring for dashboards.
+                            </p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl flex flex-col justify-between h-full bg-surface-dark shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-4 fill-1">code_blocks</span>
+<h4 class="text-2xl font-serif font-semibold text-white mb-4">Technical Leadership</h4>
+<p class="text-light-gray leading-relaxed text-sm">
+                                The Head of Technology position requires a professional with a strong technical background and experience in scalable software development, preferably with Kanban-based processes.
+                            </p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl flex flex-col justify-between h-full bg-surface-dark shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<div>
+<span class="material-symbols-outlined text-4xl text-red-400 mb-4 fill-1">troubleshoot</span>
+<h4 class="text-2xl font-serif font-semibold text-white mb-4">Key Challenges Ahead</h4>
+<p class="text-light-gray leading-relaxed text-sm">
+                                Challenges include growing the client base, reducing churn, modernizing the application, and launching new digital experience products. Critical for strategic growth.
+                            </p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl col-span-full md:col-span-1 lg:col-span-2 relative overflow-hidden bg-surface-dark shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550565118-ac19e52296c8?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-10 mix-blend-screen z-0"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-teal-400 mb-4 fill-1">data_thresholding</span>
+<h4 class="text-2xl font-serif font-semibold text-white mb-4">Impact &amp; Vision</h4>
+<p class="text-light-gray leading-relaxed max-w-3xl text-sm">
+                                This role is pivotal for SAIPOS's technological evolution and market leadership. The successful candidate will drive innovation and foster a culture of data-driven decision-making, directly influencing product roadmap and customer satisfaction.
+                            </p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-xl relative overflow-hidden bg-surface-dark shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-0"></div>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%237c8dff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E')] opacity-20 z-0"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-emerald-400 mb-4 fill-1">psychology_alt</span>
+<h4 class="text-2xl font-serif font-semibold text-white mb-4">Desired Aptitudes</h4>
+<ul class="list-disc list-inside text-light-gray leading-relaxed text-sm space-y-2 pl-4">
+<li>Deep understanding of AI/ML for customer service optimization.</li>
+<li>Expertise in data analytics and dashboard structuring.</li>
+<li>Proven track record in agile methodologies (Kanban preferred).</li>
+<li>Strong leadership and team development capabilities.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<h3 class="text-4xl font-serif font-bold text-white mb-12 text-center">
+<span class="pb-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-to-r after:from-primary/0 after:via-secondary after:to-primary/0 after:rounded-full">Recruitment Funnel Progress</span>
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+<div class="glass-panel p-8 rounded-xl bg-surface-dark shadow-xl border border-warm-gray/30 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-2xl font-serif font-semibold text-white">Candidates Mapped</h4>
+<span class="material-symbols-outlined text-4xl text-primary fill-1">group</span>
+</div>
+<div class="relative h-40 flex items-center justify-center mb-6">
+<div class="absolute w-32 h-32 rounded-full border-8 border-primary/20"></div>
+<div class="absolute w-32 h-32 rounded-full border-8 border-primary animate-spin-slow" style="border-top-color: transparent; border-right-color: transparent;"></div>
+<span class="text-7xl font-bold text-primary font-serif z-10">25</span>
+</div>
+<p class="text-center text-warm-gray text-sm">Total candidates identified and profiled</p>
+</div>
+<div class="glass-panel p-8 rounded-xl bg-surface-dark shadow-xl border border-warm-gray/30 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-2xl font-serif font-semibold text-white">Finalists Shortlisted</h4>
+<span class="material-symbols-outlined text-4xl text-secondary fill-1">award_star</span>
+</div>
+<div class="relative w-full h-40 flex items-center justify-center mb-6">
+<div class="relative w-full h-4 bg-warm-gray/30 rounded-full overflow-hidden">
+<div class="absolute h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 80%;"></div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col items-center">
+<span class="text-7xl font-bold text-white font-serif z-10">2</span>
+</div>
+</div>
+<p class="text-center text-warm-gray text-sm">Top candidates progressing to final stages</p>
+</div>
+</div>
+</section>
+<footer class="mt-24 py-16 text-center relative overflow-hidden rounded-xl glass-panel border border-surface-dark">
+<div class="absolute inset-0 bg-footer-pattern bg-cover bg-center opacity-5 mix-blend-screen z-0"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl fill-1">business_center</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-xl leading-tight tracking-tight text-white font-serif">Evermonte<span class="text-secondary">.</span></span>
+<span class="text-[0.7rem] text-light-gray uppercase tracking-wider">Recruitment AI</span>
+</div>
+</div>
+<p class="text-sm text-warm-gray uppercase tracking-wide mb-2">Powered by Gemini 3.0 Pro</p>
+<p class="text-xs text-warm-gray">© 2023 Evermonte. All rights reserved.</p>
+</div>
+</footer>
+</main>
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary hover:bg-indigo-500 text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 z-50">
+<span class="material-symbols-outlined text-2xl fill-1">chat</span>
+</button>
+</div>
+
+</body></html>

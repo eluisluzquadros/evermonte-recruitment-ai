@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte HunterAI - Perfil do Candidato</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                        body: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    colors: {
+                        primary: "#00A78E", // Evermonte Teal
+                        "primary-dark": "#008a74",
+                        "secondary": "#fb923c",
+                        "background-light": "#f3f4f6",
+                        // Updated dark theme colors to match the Dashboard reference
+                        "background-dark": "#0B1120", // Deep Navy
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#151B2B", // Card Navy
+                        "border-light": "#e2e8f0",
+                        "border-dark": "#2D3748",
+                        "chart-purple": "#8B5CF6",
+                        "chart-blue": "#3B82F6",
+                        "chart-green": "#10B981",
+                        "chart-yellow": "#F59E0B",
+                        "chart-red": "#EF4444",
+                        "chart-orange": "#F97316",
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }.radar-grid { stroke: #374151; stroke-width: 1; fill: none; }
+        .radar-axis { stroke: #374151; stroke-width: 1; }
+        .radar-area-competency { fill: rgba(139, 92, 246, 0.4); stroke: #8B5CF6; stroke-width: 2; }
+        .radar-area-leadership { fill: rgba(59, 130, 246, 0.4); stroke: #3B82F6; stroke-width: 2; }
+        .radar-area-lens { fill: rgba(255, 255, 255, 0.2); stroke: #F3F4F6; stroke-width: 2; }.radial-bg { fill: none; stroke: #1F2937; stroke-width: 8; }
+        .radial-progress { fill: none; stroke-width: 8; stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .bar-chart-skill-fill { background-color: var(--tw-bg-primary); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-200 antialiased overflow-hidden h-screen flex">
+<aside class="w-64 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex-shrink-0 flex flex-col h-full z-20">
+<div class="h-16 flex items-center px-6 border-b border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-white font-bold text-lg">E</div>
+<span class="font-bold text-gray-900 dark:text-white tracking-tight text-lg">EVERMONTE</span>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+                Visão Geral
+            </a>
+<div class="pt-4 pb-2">
+<p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Candidatos Finalistas</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-primary bg-primary/10 rounded-md transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+                Paulo Dauinheimer
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl">person_outline</span>
+                Saul Souza
+            </a>
+<div class="pt-4 pb-2">
+<p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Apoio à Decisão</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+                Relatório Comparativo
+            </a>
+</nav>
+<div class="p-4 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-xs font-bold text-gray-500 dark:text-gray-300">AI</div>
+<div>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Evermonte AI</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Decision Support</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="h-16 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex items-center justify-between px-8 flex-shrink-0">
+<h1 class="text-sm font-medium text-gray-500 dark:text-gray-400">Evermonte Insights / Perfil do Candidato</h1>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-base">devices</span>
+                    Device
+                </button>
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+<button class="text-gray-400 hover:text-primary" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-base">dark_mode</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-6 scrollbar-hide bg-background-light dark:bg-background-dark">
+<div class="max-w-[1600px] mx-auto space-y-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-6">
+<div>
+<h2 class="text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight mb-2">Perfil Detalhado do Candidato</h2>
+<div class="flex items-center gap-2">
+<span class="text-primary material-symbols-outlined text-sm">person_search</span>
+<p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Paulo Dauinheimer • Análise Aprofundada</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-xl p-4 flex items-center gap-4 shadow-lg">
+<div class="text-right">
+<p class="text-3xl font-bold text-primary">Eng. Software Sênior</p>
+<p class="text-[10px] uppercase font-semibold text-gray-500">Posição Alvo</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6 col-span-1 flex flex-col">
+<div class="border-l-4 border-chart-purple pl-3 mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider">Relatório de Competências</h3>
+<p class="text-xs text-gray-500 mt-1">Visão detalhada das habilidades essenciais (Cognisess Report)</p>
+</div>
+<div class="flex-1 flex items-center justify-center relative min-h-[300px] mb-4">
+<span class="absolute top-2 text-[9px] font-semibold text-gray-400 uppercase text-center w-full">Resolução de Problemas</span>
+<span class="absolute bottom-2 text-[9px] font-semibold text-gray-400 uppercase text-center w-full">Inovação</span>
+<span class="absolute top-[25%] left-2 text-[9px] font-semibold text-gray-400 uppercase w-20 text-right leading-tight">Adaptabilidade</span>
+<span class="absolute top-[25%] right-2 text-[9px] font-semibold text-gray-400 uppercase w-20 leading-tight">Comunicação</span>
+<span class="absolute bottom-[25%] left-2 text-[9px] font-semibold text-gray-400 uppercase w-20 text-right leading-tight">Orientação p/ Resultados</span>
+<span class="absolute bottom-[25%] right-2 text-[9px] font-semibold text-gray-400 uppercase w-20 leading-tight">Trabalho em Equipe</span>
+<svg class="w-full max-w-[280px] h-full" viewBox="0 0 200 200">
+<polygon class="radar-grid" points="100,20 169,60 169,140 100,180 31,140 31,60"></polygon>
+<polygon class="radar-grid" points="100,40 152,70 152,130 100,160 48,130 48,70"></polygon>
+<polygon class="radar-grid" points="100,60 135,80 135,120 100,140 65,120 65,80"></polygon>
+<line class="radar-axis" x1="100" x2="100" y1="100" y2="20"></line>
+<line class="radar-axis" x1="100" x2="169" y1="100" y2="60"></line>
+<line class="radar-axis" x1="100" x2="169" y1="100" y2="140"></line>
+<line class="radar-axis" x1="100" x2="100" y1="100" y2="180"></line>
+<line class="radar-axis" x1="100" x2="31" y1="100" y2="140"></line>
+<line class="radar-axis" x1="100" x2="31" y1="100" y2="60"></line>
+<polygon class="radar-area-competency" points="100,25 160,70 150,135 100,165 40,135 50,70"></polygon>
+<circle cx="100" cy="25" fill="white" r="3"></circle>
+<circle cx="160" cy="70" fill="white" r="3"></circle>
+<circle cx="150" cy="135" fill="white" r="3"></circle>
+<circle cx="100" cy="165" fill="white" r="3"></circle>
+<circle cx="40" cy="135" fill="white" r="3"></circle>
+<circle cx="50" cy="70" fill="white" r="3"></circle>
+</svg>
+</div>
+<div class="space-y-3 text-sm">
+<p><strong class="text-primary">Pontos Fortes:</strong> Paulo demonstra forte adaptabilidade e excelente capacidade de resolução de problemas, destacando-se em cenários complexos.</p>
+<p><strong class="text-chart-red">Áreas de Desenvolvimento:</strong> Potencial para aprimorar a inovação e o trabalho em equipe através de projetos colaborativos e brainstorming frequente.</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6 col-span-1 flex flex-col">
+<div class="border-l-4 border-chart-blue pl-3 mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider">Relatório de Liderança</h3>
+<p class="text-xs text-gray-500 mt-1">Análise do potencial e estilo de liderança (Cognisess Report)</p>
+</div>
+<div class="flex-1 flex items-center justify-center relative min-h-[300px] mb-4">
+<span class="absolute top-2 text-[9px] font-semibold text-gray-400 uppercase text-center w-full">Visão Estratégica</span>
+<span class="absolute top-[35%] right-0 text-[9px] font-semibold text-gray-400 uppercase w-24 leading-tight">Gestão de Pessoas</span>
+<span class="absolute bottom-[20%] right-4 text-[9px] font-semibold text-gray-400 uppercase w-20 leading-tight">Influência</span>
+<span class="absolute bottom-[20%] left-4 text-[9px] font-semibold text-gray-400 uppercase w-20 text-right leading-tight">Tomada de Decisão</span>
+<span class="absolute top-[35%] left-0 text-[9px] font-semibold text-gray-400 uppercase w-24 text-right leading-tight">Execução</span>
+<svg class="w-full max-w-[280px] h-full" viewBox="0 0 200 200">
+<polygon class="radar-grid" points="100,20 176,75 147,166 53,166 24,75"></polygon>
+<polygon class="radar-grid" points="100,52 145,84 128,138 72,138 55,84"></polygon>
+<line class="radar-axis" x1="100" x2="100" y1="100" y2="20"></line>
+<line class="radar-axis" x1="100" x2="176" y1="100" y2="75"></line>
+<line class="radar-axis" x1="100" x2="147" y1="100" y2="166"></line>
+<line class="radar-axis" x1="100" x2="53" y1="100" y2="166"></line>
+<line class="radar-axis" x1="100" x2="24" y1="100" y2="75"></line>
+<polygon class="radar-area-leadership" points="100,25 165,80 135,150 65,150 40,80"></polygon>
+<circle cx="100" cy="25" fill="white" r="3"></circle>
+<circle cx="165" cy="80" fill="white" r="3"></circle>
+<circle cx="135" cy="150" fill="white" r="3"></circle>
+<circle cx="65" cy="150" fill="white" r="3"></circle>
+<circle cx="40" cy="80" fill="white" r="3"></circle>
+</svg>
+</div>
+<div class="space-y-3 text-sm">
+<p><strong class="text-primary">Pontos Fortes:</strong> Paulo exibe uma forte visão estratégica e é decisivo, o que é crucial em papéis de liderança técnica.</p>
+<p><strong class="text-chart-red">Áreas de Desenvolvimento:</strong> Foco em desenvolver gestão de pessoas e influência, através de coaching e mentorship para equipes júnior.</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6 col-span-1 flex flex-col">
+<div class="border-l-4 border-gray-400 pl-3 mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider">Relatório de Personalidade (Lens Mini)</h3>
+<p class="text-xs text-gray-500 mt-1">Perfil psicométrico agregado (Cognisess Report)</p>
+</div>
+<div class="flex items-center justify-end mb-4">
+<span class="px-2 py-1 rounded border border-gray-600 text-[10px] text-gray-400">Big Five Model</span>
+</div>
+<div class="flex-1 flex items-center justify-center relative min-h-[350px] mb-4">
+<span class="absolute top-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Abertura</span>
+<span class="absolute top-[35%] right-[10%] text-[10px] font-bold text-gray-400 uppercase tracking-widest">Conscienciosidade</span>
+<span class="absolute bottom-[10%] right-[15%] text-[10px] font-bold text-gray-400 uppercase tracking-widest">Extroversão</span>
+<span class="absolute bottom-[10%] left-[15%] text-[10px] font-bold text-gray-400 uppercase tracking-widest">Amabilidade</span>
+<span class="absolute top-[35%] left-[10%] text-[10px] font-bold text-gray-400 uppercase tracking-widest">Neuroticismo</span>
+<svg class="w-full max-w-[400px] h-full" viewBox="0 0 200 200">
+<polygon class="radar-grid" points="100,20 176,75 147,166 53,166 24,75"></polygon>
+<polygon class="radar-grid" points="100,40 157,81 135,149 65,149 43,81"></polygon>
+<polygon class="radar-grid" points="100,60 138,87 123,132 77,132 62,87"></polygon>
+<line class="radar-axis" stroke-dasharray="2,2" x1="100" x2="100" y1="100" y2="20"></line>
+<line class="radar-axis" stroke-dasharray="2,2" x1="100" x2="176" y1="100" y2="75"></line>
+<line class="radar-axis" stroke-dasharray="2,2" x1="100" x2="147" y1="100" y2="166"></line>
+<line class="radar-axis" stroke-dasharray="2,2" x1="100" x2="53" y1="100" y2="166"></line>
+<line class="radar-axis" stroke-dasharray="2,2" x1="100" x2="24" y1="100" y2="75"></line>
+<polygon class="radar-area-lens" points="100,30 160,85 130,150 60,150 35,85"></polygon>
+<circle cx="100" cy="30" fill="white" r="3" stroke="#9CA3AF" stroke-width="1"></circle>
+<circle cx="160" cy="85" fill="white" r="3" stroke="#9CA3AF" stroke-width="1"></circle>
+<circle cx="130" cy="150" fill="white" r="3" stroke="#9CA3AF" stroke-width="1"></circle>
+<circle cx="60" cy="150" fill="white" r="3" stroke="#9CA3AF" stroke-width="1"></circle>
+<circle cx="35" cy="85" fill="white" r="3" stroke="#9CA3AF" stroke-width="1"></circle>
+</svg>
+</div>
+<div class="space-y-3 text-sm">
+<p><strong class="text-primary">Traços Predominantes:</strong> Paulo apresenta alta abertura a novas experiências e conscienciosidade, indicando um perfil curioso e orientado a detalhes.</p>
+<p><strong class="text-chart-red">Implicações para o Desenvolvimento:</strong> Pode se beneficiar de projetos que exigem experimentação e autonomia, enquanto desenvolve a extroversão para maior colaboração em equipe.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6">
+<div class="border-l-4 border-chart-green pl-3 mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white uppercase tracking-wider">Future-Proofing Skills Deep Dive</h3>
+<p class="text-xs text-gray-500 mt-1">Competências do relatório "Future of Jobs" do Fórum Econômico Mundial</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
+<div class="space-y-6">
+<h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Formas de Pensamento</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-bold text-gray-400 uppercase">
+<span>Criativo</span>
+<span>80%</span>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full bg-chart-green w-[80%]"></div>
+</div>
+<p class="text-xs text-gray-500">Capacidade de gerar ideias novas e valiosas.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-bold text-gray-400 uppercase">
+<span>Crítico</span>
+<span>75%</span>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full bg-chart-blue w-[75%]"></div>
+</div>
+<p class="text-xs text-gray-500">Habilidade de analisar informações objetivamente.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-bold text-gray-400 uppercase">
+<span>Complexo</span>
+<span>85%</span>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full bg-chart-purple w-[85%]"></div>
+</div>
+<p class="text-xs text-gray-500">Compreensão e manejo de sistemas intrincados.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-bold text-gray-400 uppercase">
+<span>Analítico</span>
+<span>90%</span>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full bg-chart-orange w-[90%]"></div>
+</div>
+<p class="text-xs text-gray-500">Discernir padrões e tirar conclusões lógicas.</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-md font-semibold text-gray-700 dark:text-gray-300">Sugestões de Desenvolvimento</h4>
+<ul class="space-y-3 text-sm list-disc list-inside marker:text-primary pl-2">
+<li>
+<strong>Pensamento Criativo:</strong> Participar de workshops de design thinking e projetos de inovação aberta.
+                                </li>
+<li>
+<strong>Pensamento Crítico:</strong> Engajar em debates e análises de casos complexos, questionando premissas.
+                                </li>
+<li>
+<strong>Pensamento Complexo:</strong> Assumir responsabilidades em projetos multifuncionais ou de alta interdependência.
+                                </li>
+<li>
+<strong>Pensamento Analítico:</strong> Liderar a análise de dados para tomada de decisões estratégicas em novas áreas.
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

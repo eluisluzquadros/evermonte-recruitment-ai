@@ -1,0 +1,19 @@
+{
+    "welcome": "Welcome to Evermonte AI",
+    "login": "Access Platform",
+    "settings": "Settings",
+    "projects": "Projects",
+    "dashboard": "Dashboard",
+    "finance": "Finance",
+    "hero": {
+        "title_line1": "The Future of",
+        "title_line2": "Executive Search",
+        "subtitle": "Evermonte AI-Headhunter: A new era of data-driven recruitment.",
+        "description": "AI-Headhunter designed to centralize, automate, and elevate the strategic level of Evermonte's Executive & Board Search."
+    },
+    "nav": {
+        "platform": "Access Platform",
+        "intelligence": "Intelligence",
+        "signin": "Sign In"
+    }
+}

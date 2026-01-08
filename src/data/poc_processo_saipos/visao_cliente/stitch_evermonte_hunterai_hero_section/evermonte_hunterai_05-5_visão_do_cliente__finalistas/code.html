@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte Insights - Dashboard de Finalistas</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#009B86", // Teal/Emerald from the screenshot
+                        "primary-dark": "#007d6c",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "border-light": "#e2e8f0",
+                        "border-dark": "#334155",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "0.75rem",
+                        '2xl': "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-display antialiased h-screen flex overflow-hidden selection:bg-primary selection:text-white">
+<aside class="w-72 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex flex-col justify-between shrink-0 transition-colors duration-300">
+<div>
+<div class="h-20 flex items-center px-6 border-b border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary text-white flex items-center justify-center rounded font-bold text-lg">E</div>
+<span class="font-bold text-lg tracking-tight text-gray-900 dark:text-white">EVERMONTE</span>
+</div>
+</div>
+<nav class="mt-6 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-6 py-3 text-primary bg-primary/10 border-r-4 border-primary font-medium" href="#">
+<span class="material-icons-round text-xl">dashboard</span>
+                    Visão Geral
+                </a>
+<div class="px-6 mt-6 mb-2 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Candidatos Finalistas</div>
+<a class="flex items-center gap-3 px-6 py-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-icons-round text-xl text-gray-400">person_outline</span>
+                    Paulo Dauinheimer
+                </a>
+<a class="flex items-center gap-3 px-6 py-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-icons-round text-xl text-gray-400">person_outline</span>
+                    Saul Souza
+                </a>
+<div class="px-6 mt-6 mb-2 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Apoio à Decisão</div>
+<a class="flex items-center gap-3 px-6 py-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-icons-round text-xl text-gray-400">description</span>
+                    Relatório Comparativo
+                </a>
+</nav>
+</div>
+<div class="p-4 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors">
+<div class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-500 dark:text-gray-300 font-bold">
+                    AI
+                </div>
+<div>
+<p class="text-sm font-semibold text-gray-900 dark:text-white">Evermonte AI</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Decision Support</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full relative">
+<header class="h-16 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex items-center justify-between px-8 shrink-0">
+<div class="text-sm font-medium text-gray-500 dark:text-gray-400">Evermonte Insights</div>
+<div class="flex items-center gap-4 text-gray-400">
+<div class="flex items-center gap-2 text-xs font-medium uppercase tracking-wider">
+<span class="material-icons-round text-lg">devices</span>
+                    Device
+                </div>
+<button class="hover:text-primary transition-colors"><span class="material-icons-round">refresh</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-icons-round">fullscreen</span></button>
+<button class="hover:text-primary transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round">dark_mode</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 relative">
+<div class="max-w-7xl mx-auto space-y-8 pb-24">
+<div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Dashboard de Finalistas</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Processo Seletivo: <span class="text-gray-700 dark:text-gray-300 font-medium">Gerência Executiva</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col justify-between h-40">
+<div class="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center mb-4">
+<span class="material-icons-round">groups</span>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Candidatos Avaliados</p>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">2 Finalistas</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col justify-between h-40">
+<div class="w-10 h-10 bg-emerald-50 dark:bg-emerald-900/20 text-primary rounded-lg flex items-center justify-center mb-4">
+<span class="material-icons-round">psychology</span>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Análise Cognitiva</p>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">Concluída</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col justify-between h-40">
+<div class="w-10 h-10 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mb-4">
+<span class="material-icons-round">assignment</span>
+</div>
+<div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Relatório de Decisão</p>
+<p class="text-2xl font-bold text-gray-900 dark:text-white">Disponível</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Paulo Ricardo Dauinheimer</h3>
+<span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-300 text-xs font-semibold rounded-full">Treinadora</span>
+</div>
+<p class="text-primary font-medium text-sm mb-4">Gerente de Operações</p>
+<p class="text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                Profissional apaixonado por tecnologia e negócios digitais com forte atuação em liderança de equipes multidisciplinares e reestruturação de processos.
+                            </p>
+<div class="grid grid-cols-3 gap-2 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 mb-6">
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Drive</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">5/5</p>
+</div>
+<div class="text-center border-l border-r border-gray-200 dark:border-gray-700">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Execução</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">4/5</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Resiliência</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">5/5</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-border-light dark:border-border-dark text-gray-700 dark:text-gray-200 font-medium text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
+                                Ver Perfil Completo
+                                <span class="material-icons-round text-base">arrow_forward</span>
+</button>
+</div>
+<div class="px-6 py-3 bg-gray-50 dark:bg-gray-800/80 border-t border-border-light dark:border-border-dark flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-base text-primary">trending_up</span>
+                                Perfil de Crescimento
+                            </div>
+<div class="uppercase tracking-wide font-medium">Match: Gerente</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Saul Souza</h3>
+<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">Apoiador</span>
+</div>
+<p class="text-primary font-medium text-sm mb-4">Gerente de Suporte</p>
+<p class="text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                Gerente de Suporte experiente com foco em SaaS e tecnologia, especializado em escalar processos e formar equipes de alto desempenho (NPS de -40 para +70).
+                            </p>
+<div class="grid grid-cols-3 gap-2 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 mb-6">
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Drive</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">2/5</p>
+</div>
+<div class="text-center border-l border-r border-gray-200 dark:border-gray-700">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Execução</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">3/5</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Resiliência</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">3/5</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-border-light dark:border-border-dark text-gray-700 dark:text-gray-200 font-medium text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center gap-2">
+                                Ver Perfil Completo
+                                <span class="material-icons-round text-base">arrow_forward</span>
+</button>
+</div>
+<div class="px-6 py-3 bg-gray-50 dark:bg-gray-800/80 border-t border-border-light dark:border-border-dark flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-base text-gray-400">verified_user</span>
+                                Perfil de Estabilidade
+                            </div>
+<div class="uppercase tracking-wide font-medium">Match: Gerente</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 right-8 z-10">
+<button class="bg-primary hover:bg-primary-dark text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-3 font-semibold text-sm">
+<span class="material-icons-round">description</span>
+                Acessar Relatório de Apoio à Tomada de Decisão
+            </button>
+</div>
+</main>
+
+</body></html>

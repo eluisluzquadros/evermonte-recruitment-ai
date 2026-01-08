@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@config "../tailwind.config.cjs";
+
+@layer base {
+  /* Evermonte Design System - Light Theme (Default) */
+  :root {
+    /* Base Colors */
+    --background: 210 20% 98%;                  /* #F8FAFC - Quase branco, levemente azulado */
+    --foreground: 215 47% 11%;                  /* #0F172A - Azul marinho profundo */
+
+    /* Cards & Surfaces */
+    --card: 0 0% 100%;                          /* #FFFFFF - Branco puro */
+    --card-foreground: 215 47% 11%;             /* #0F172A */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 53% 25%;
+
+    /* Primary - Azul Evermonte (Brand Identity) */
+    --primary: 204 53% 25%;                     /* #1F4461 - Azul Evermonte */
+    --primary-foreground: 0 0% 100%;            /* Branco sobre azul */
+
+    /* Secondary - Azul claro Evermonte */
+    --secondary: 206 34% 48%;                   /* #547FA1 - Azul claro */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Tons neutros */
+    --muted: 210 40% 96%;                       /* Azul acinzentado muito claro */
+    --muted-foreground: 215 16% 47%;            /* Slated text */
+
+    /* Accent - Sutilmente azulado */
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 47% 11%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;                   /* Vermelho padrão */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 204 20% 88%;                      /* Bordas sutis azuladas */
+    --input: 204 20% 88%;
+    --ring: 204 53% 25%;                        /* Focus ring Evermonte */
+
+    --radius: 0.75rem;                          /* Border radius premium */
+  }
+
+  /* Evermonte Design System - Dark Theme */
+  .dark {
+    /* Base Colors - Dark */
+    --background: 204 53% 8%;                   /* #0F2230 - Azul muito escuro */
+    --foreground: 0 0% 98%;                     /* Branco quase puro */
+
+    /* Cards & Surfaces - Dark */
+    --card: 204 53% 12%;                        /* Card escuro azulado */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 204 53% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - Gold no Dark (contraste premium) */
+    --primary: 45 65% 52%;                      /* #D4AF37 - Gold Evermonte */
+    --primary-foreground: 204 53% 8%;           /* Azul escuro sobre gold */
+
+    /* Secondary - Azul claro mantido */
+    --secondary: 206 34% 48%;                   /* #547FA1 - Azul claro */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Dark */
+    --muted: 204 30% 15%;                       /* Cinza azulado escuro */
+    --muted-foreground: 0 0% 70%;               /* Cinza claro para texto */
+
+    /* Accent - Dark */
+    --accent: 204 30% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive - Dark */
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders & Inputs - Dark */
+    --border: 204 30% 20%;
+    --input: 204 30% 20%;
+    --ring: 45 65% 52%;                         /* Gold ring no dark */
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animate-delay-800 {
+    animation-delay: 800ms;
+  }
+
+  .animate-delay-900 {
+    animation-delay: 900ms;
+  }
+
+  .animate-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animate-delay-1200 {
+    animation-delay: 1200ms;
+  }
+
+  .animate-delay-1400 {
+    animation-delay: 1400ms;
+  }
+}
+
+.custom-checkbox {
+  @apply h-4 w-4 rounded border-gray-300 text-violet-600 focus:ring-violet-500 dark:border-gray-600 dark:bg-gray-800;
+}

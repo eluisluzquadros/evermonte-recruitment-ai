@@ -1,0 +1,19 @@
+{
+    "welcome": "Bem-vindo ao Evermonte AI",
+    "login": "Acessar Plataforma",
+    "settings": "Configurações",
+    "projects": "Projetos",
+    "dashboard": "Dashboard",
+    "finance": "Financeiro",
+    "hero": {
+        "title_line1": "O Futuro do",
+        "title_line2": "Executive Search",
+        "subtitle": "Evermonte AI-Headhunter: Uma nova era de recrutamento orientado a dados.",
+        "description": "AI-Headhunter desenhado para centralizar, automatizar e elevar o nível estratégico do Executive & Board Search da Evermonte."
+    },
+    "nav": {
+        "platform": "Acessar Plataforma",
+        "intelligence": "Inteligência",
+        "signin": "Entrar"
+    }
+}

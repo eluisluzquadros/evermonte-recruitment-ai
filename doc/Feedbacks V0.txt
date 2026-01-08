@@ -1,0 +1,17 @@
+## aba dashboard:
+### remover o botão de "login workspace"
+### subaba Alinhamento:
+- remover botão de input do drive
+- remover botão de input do gmail
+
+### subaba Entrevistas:
+- remover botão de input do drive
+- remover botão de input do gmail
+
+### subaba Shortlist:
+- alterar o nome do botão "Gerar Análise Comparativa" para "Gerar Shortlist"
+- clicar no botão "Gerar Análise Comparativa" gera um erro "Error generating shortlist analysis"
+
+
+## subaba Decisão: 
+“O CENÁRIO DE DECISÃO” é um título do cenário por exemplo: “Foco em Expansão nacional” Ou “Aumento de Market share”. Logo, o cenário de decisão é definido como o foco em que cada candidato se encaixa melhor a depender da prioridade do cliente conforme dados da entrevista de alinhamento com a empresa.

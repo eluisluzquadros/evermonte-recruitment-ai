@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte HunterAI - Relatório Comparativo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0e4f45", // Deep teal from header
+                        "primary-light": "#157568", 
+                        "background-light": "#f3f4f6", // Gray 100
+                        "background-dark": "#111827", // Gray 900
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1f2937", // Gray 800
+                        "border-light": "#e5e7eb", // Gray 200
+                        "border-dark": "#374151", // Gray 700
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                        body: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .sidebar-link {
+                @apply flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors border-l-4 border-transparent;
+            }
+            .sidebar-link.active {
+                @apply text-primary dark:text-white bg-primary/5 dark:bg-primary/20 border-primary font-semibold;
+            }
+            .table-label {
+                @apply text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 lg:mb-0;
+            }
+            .content-text {
+                @apply text-sm leading-relaxed text-gray-600 dark:text-gray-300;
+            }
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased min-h-screen flex flex-col lg:flex-row overflow-x-hidden">
+<aside class="w-full lg:w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex flex-col h-auto lg:h-screen lg:fixed z-30">
+<div class="h-16 flex items-center px-6 border-b border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2 font-extrabold text-xl tracking-tight text-gray-900 dark:text-white">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white text-lg">E</div>
+                EVERMONTE
+            </div>
+</div>
+<nav class="flex-1 overflow-y-auto py-6 space-y-1">
+<a class="sidebar-link" href="#">
+<span class="material-icons-round text-xl">dashboard</span>
+                Visão Geral
+            </a>
+<div class="px-6 mt-6 mb-2 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Candidatos Finalistas</div>
+<a class="sidebar-link" href="#">
+<span class="material-icons-round text-xl">person_outline</span>
+                Paulo Dauinheimer
+            </a>
+<a class="sidebar-link" href="#">
+<span class="material-icons-round text-xl">person_outline</span>
+                Saul Souza
+            </a>
+<div class="px-6 mt-6 mb-2 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Apoio à Decisão</div>
+<a class="sidebar-link active" href="#">
+<span class="material-icons-round text-xl">description</span>
+                Relatório Comparativo
+            </a>
+</nav>
+<div class="p-4 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 font-bold text-sm">
+                    AI
+                </div>
+<div>
+<p class="text-sm font-bold text-gray-900 dark:text-white">Evermonte AI</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Decision Support</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 lg:ml-64 p-4 lg:p-8 min-h-screen">
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+<h1 class="hidden md:block text-sm font-medium text-gray-400 dark:text-gray-500">Evermonte Insights / Tomada de Decisão</h1>
+<div class="flex items-center gap-3 text-gray-500 dark:text-gray-400 text-sm ml-auto">
+<span class="flex items-center gap-1"><span class="material-icons-round text-base">devices</span> Device</span>
+<span class="material-icons-round text-base cursor-pointer hover:text-primary">refresh</span>
+<span class="material-icons-round text-base cursor-pointer hover:text-primary">fullscreen</span>
+</div>
+</header>
+<div class="bg-primary rounded-xl p-6 lg:p-8 shadow-lg text-white mb-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm shrink-0">
+<span class="material-icons-round text-3xl text-emerald-100">assessment</span>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-2">Relatório de Apoio à Tomada de Decisão</h2>
+<p class="text-emerald-100/90 max-w-3xl leading-relaxed">
+                            Matriz comparativa baseada em inteligência artificial e análise de competências executivas para facilitar a escolha estratégica.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-soft border border-border-light dark:border-border-dark overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-[180px_1fr_1fr] border-b border-border-light dark:border-border-dark">
+<div class="p-6 hidden lg:flex items-center">
+<span class="table-label text-gray-300 dark:text-gray-600">SEÇÃO</span>
+</div>
+<div class="p-6 border-l border-border-light dark:border-border-dark relative group">
+<div class="absolute left-0 top-6 bottom-6 w-1 bg-orange-500 rounded-r-sm"></div>
+<div class="pl-4">
+<h3 class="font-bold text-gray-900 dark:text-white text-lg">Paulo Ricardo Dauinheimer</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Gerente de Operações</p>
+</div>
+</div>
+<div class="p-6 border-l border-border-light dark:border-border-dark relative group">
+<div class="absolute left-0 top-6 bottom-6 w-1 bg-blue-500 rounded-r-sm"></div>
+<div class="pl-4">
+<h3 class="font-bold text-gray-900 dark:text-white text-lg">Saul Souza</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Gerente de Suporte</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[180px_1fr] border-b border-border-light dark:border-border-dark bg-gray-50/50 dark:bg-gray-800/30">
+<div class="p-6 lg:py-8">
+<h4 class="text-primary font-bold text-xs uppercase tracking-wider">Introdução</h4>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark">
+<p class="content-text mb-4">
+                        Este relatório de apoio à tomada de decisão foi elaborado pela equipe de Inteligência Artificial da Evermonte, integrando avaliações de entrevistas profundas com os resultados quantitativos dos assessments cognitivos. O objetivo é transcender a análise curricular básica, fornecendo uma visão holística sobre como o perfil comportamental de cada finalista se traduzirá em desempenho real.
+                    </p>
+<p class="content-text">
+                        Abaixo, apresentamos uma análise comparativa estruturada. Para cada candidato, identificamos não apenas suas competências isoladas, mas como a combinação única de seus traços de personalidade, estilo de liderança e motivadores cria um 'Cenário de Decisão' específico.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[180px_1fr_1fr] border-b border-border-light dark:border-border-dark">
+<div class="p-6 lg:py-8">
+<h4 class="text-gray-900 dark:text-gray-200 font-bold text-xs uppercase tracking-wider">Sumário Executivo</h4>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark flex flex-col h-full">
+<p class="content-text mb-6 flex-grow">
+                        Paulo demonstra um perfil de alta energia e orientação para resultados (Drive 5, Motivação 5). Sua experiência como CEO e Fundador reflete-se em pontuações máximas em Autonomia, Iniciativa e Organização. É um líder "Treinador" com alta extroversão, ideal para ambientes que exigem mobilização de equipes e vendas de ideias.
+                    </p>
+<div class="flex gap-2 flex-wrap mt-auto">
+<span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">Perfil: Treinadora</span>
+<span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">Drive: 5/5</span>
+</div>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark flex flex-col h-full">
+<p class="content-text mb-6 flex-grow">
+                        Saul apresenta um perfil "Apoiador" focado em estabilidade e execução técnica. Suas pontuações revelam alta Assertividade (5) e boa Adaptabilidade (4), características cruciais para gestão de crises em suporte. No entanto, possui baixo Drive (2) e aversão à Tomada de Risco (1), preferindo ambientes estruturados.
+                    </p>
+<div class="flex gap-2 flex-wrap mt-auto">
+<span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">Perfil: Apoiador</span>
+<span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">Drive: 2/5</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[180px_1fr_1fr] border-b border-border-light dark:border-border-dark bg-white dark:bg-surface-dark">
+<div class="p-6 lg:py-8">
+<h4 class="text-primary font-bold text-xs uppercase tracking-wider">Cenário de Escolha</h4>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark">
+<div class="flex items-start gap-3">
+<span class="material-icons-round text-orange-500 mt-0.5">check_circle_outline</span>
+<h5 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Cenário de Expansão Agressiva e Reestruturação Comercial</h5>
+</div>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark">
+<div class="flex items-start gap-3">
+<span class="material-icons-round text-blue-500 mt-0.5">check_circle_outline</span>
+<h5 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Cenário de Estabilização de Processos e Eficiência Operacional</h5>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[180px_1fr_1fr] bg-gray-50 dark:bg-gray-900/40">
+<div class="p-6 lg:py-8">
+<h4 class="text-gray-900 dark:text-gray-200 font-bold text-xs uppercase tracking-wider">O Porquê do Cenário</h4>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark">
+<blockquote class="pl-4 border-l-2 border-orange-300 dark:border-orange-700 italic text-sm text-gray-600 dark:text-gray-400">
+                        "Paulo é a escolha ideal para um cenário onde a empresa precisa de uma 'sacudida' cultural ou expansão rápida. Sua alta pontuação em Liderança (5) combinada com Criatividade (5) e Resiliência (5) sugere alguém capaz de suportar a pressão de ambientes caóticos."
+                    </blockquote>
+</div>
+<div class="p-6 lg:py-8 border-l border-border-light dark:border-border-dark">
+<blockquote class="pl-4 border-l-2 border-blue-300 dark:border-blue-700 italic text-sm text-gray-600 dark:text-gray-400">
+                        "Saul é a escolha segura para consolidar operações. Se o desafio da vaga é organizar um departamento de suporte caótico, garantir cumprimento de SLA e manter a equipe coesa sem grandes rupturas, ele é o candidato. Sua abordagem é pragmática."
+                    </blockquote>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Simple dark mode toggle logic for demonstration purposes (usually handled by system pref or local storage)
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+</body></html>

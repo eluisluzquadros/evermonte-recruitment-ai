@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte HunterAI - Artistic Intelligence Briefing</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        // New Palette: Deep Forest Green, Charcoal, Coral, Deep Gold
+                        'base-dark': '#1A2A22', // Deep Forest Green base
+                        'surface-dark': '#2C3E34', // Slightly lighter forest green for surfaces
+                        'charcoal': '#1F2937', // Dark grey/charcoal for text contrast
+                        'accent-coral': '#FF6B6B', // Vibrant Coral pop
+                        'accent-gold': '#DAA520', // Deep Gold pop
+                        'text-light': '#E5E7EB', // Off-white for readability on dark
+                        'text-muted': '#A0A0A0', // Muted grey for secondary text
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem", // Slightly larger radius for a modern feel
+                        'xl': '1.5rem',
+                        '2xl': '2rem',
+                    },
+                    backgroundImage: {
+                        'glow-gradient': 'radial-gradient(circle at top center, rgba(44, 62, 52, 0.3) 0%, rgba(26, 42, 34, 0) 70%)',
+                        'data-texture': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234F4F4F\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm10-10h-2v4h2v2h-2v4h-2v-4h-4v-2h4v-4h2v4h2v2zm-20 6h-2v4h2v2h-2v4h-2v-4h-4v-2h4v-4h2v4h2v2zM6 60c16.57 0 30-13.43 30-30S22.57 0 6 0 0 13.43 0 30s13.43 30 30 30zM0 30c0-11.05 8.95-20 20-20v-2C8.95 8 0 16.95 0 30H-.001zm20 20c-11.05 0-20-8.95-20-20h-2c0 11.05 8.95 20 20 20v-2zm-2 20c11.05 0 20-8.95 20-20h2c0 11.05-8.95 20-20 20v-2zM40 0h2c0 11.05-8.95 20-20 20v-2c11.05 0 20-8.95 20-20z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4A5B52;border-radius: 3px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(218,165,32,0.15));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400;
+        }
+        .highlight-word {
+            @apply text-accent-coral font-bold tracking-wide;
+        }
+        .highlight-subtle {
+            @apply text-accent-gold font-medium;
+        }
+    </style>
+</head>
+<body class="bg-base-dark text-text-light font-sans antialiased overflow-hidden selection:bg-accent-coral selection:text-white transition-colors duration-300">
+<div class="flex h-screen w-full">
+<aside class="w-64 flex-shrink-0 flex flex-col justify-between border-r border-base-dark/50 bg-surface-dark transition-colors duration-300 shadow-xl">
+<div>
+<div class="h-20 flex items-center px-6 border-b border-surface-dark/50">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-coral to-accent-gold flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined text-xl fill-1">insights</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-xl leading-tight tracking-tight text-white">Evermo<span class="text-accent-coral">.</span></span>
+<span class="text-[0.6rem] text-text-muted uppercase tracking-wider">Artistic Intelligence</span>
+</div>
+</div>
+<button class="ml-auto text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined text-base">dark_mode</span>
+</button>
+</div>
+<div class="px-6 py-4">
+<span class="text-[0.65rem] uppercase tracking-widest text-text-muted font-semibold opacity-70">Workspace Mode</span>
+</div>
+<nav class="px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-light/80 hover:bg-base-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-accent-coral transition-colors fill-0">dashboard</span>
+                        Dashboard
+                    </a>
+<div class="pt-4 pb-2 px-3">
+<span class="text-[0.65rem] uppercase tracking-widest text-text-muted font-semibold opacity-70">Processo Seletivo</span>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-light/80 hover:bg-base-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-accent-coral transition-colors fill-0">grid_view</span>
+                        Alinhamento
+                        <span class="ml-auto material-symbols-outlined text-accent-gold text-base fill-1">check_circle</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-light/80 hover:bg-base-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-accent-coral transition-colors fill-0">group</span>
+                        Entrevistas
+                        <span class="ml-auto bg-accent-gold/20 text-accent-gold text-xs px-2 py-0.5 rounded-full font-bold">2</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-light/80 hover:bg-base-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-accent-coral transition-colors fill-0">description</span>
+                        Shortlist
+                        <span class="ml-auto bg-accent-gold/20 text-accent-gold text-xs px-2 py-0.5 rounded-full font-bold">2</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-light/80 hover:bg-base-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-accent-coral transition-colors fill-0">ads_click</span>
+                        Decisão
+                        <span class="ml-auto material-symbols-outlined text-accent-gold text-base fill-1">check_circle</span>
+</a>
+<div class="pt-4 pb-2 px-3">
+<span class="text-[0.65rem] uppercase tracking-widest text-text-muted font-semibold opacity-70">Apresentação</span>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium bg-base-dark/50 text-white rounded-lg border-l-2 border-accent-coral transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl text-accent-coral fill-1">monitor</span>
+                        Artistic Briefing
+                    </a>
+</nav>
+</div>
+<div class="p-6 border-t border-surface-dark/50">
+<p class="text-[0.6rem] text-text-muted uppercase tracking-wide text-center">
+                    Powered by Evermo.AI Engine
+                </p>
+</div>
+</aside>
+<main class="flex-1 relative flex flex-col overflow-y-auto bg-base-dark">
+<div class="absolute top-0 left-0 w-full h-96 bg-glow-gradient pointer-events-none"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 md:p-12 lg:p-16 relative z-10 w-full max-w-screen-xl mx-auto auto-rows-min">
+<div class="col-span-full mb-8 lg:mb-16">
+<p class="text-[0.7rem] font-semibold tracking-[0.25em] text-accent-coral uppercase mb-2">Artistic Intelligence Briefing</p>
+<h1 class="font-display text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-white drop-shadow-lg animate-[fade-in_1s_ease-out]">
+            EVERMONTE
+        </h1>
+<h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-light leading-none text-text-light/80 mt-4 ml-2">
+            EXECUTIVE SEARCH
+        </h2>
+</div>
+<div class="lg:col-span-2 glass-panel p-8 md:p-10 rounded-2xl flex flex-col justify-between overflow-hidden relative">
+<div class="absolute inset-0 bg-data-texture opacity-5 pointer-events-none"></div>
+<div class="relative z-10">
+<p class="text-[0.65rem] uppercase tracking-widest text-text-muted font-semibold mb-4">Client Focus</p>
+<h3 class="font-display text-5xl md:text-6xl font-bold text-accent-gold leading-tight mb-4">
+                SAIPOS
+            </h3>
+<p class="text-[0.65rem] uppercase tracking-widest text-text-muted font-semibold mb-2">Role Defining</p>
+<h4 class="font-sans text-xl md:text-2xl font-bold text-text-light leading-snug">
+                Head de Tecnologia
+            </h4>
+</div>
+<div class="mt-8 flex justify-end gap-6 relative z-10">
+<div class="text-center group cursor-default">
+<div class="font-display text-5xl font-bold text-accent-coral mb-1 group-hover:scale-110 transition-transform duration-300">
+                    2
+                </div>
+<div class="text-[0.6rem] uppercase tracking-widest text-text-muted font-semibold">Mapeados</div>
+</div>
+<div class="h-16 w-px bg-surface-dark/70"></div>
+<div class="text-center group cursor-default">
+<div class="font-display text-5xl font-bold text-accent-coral mb-1 group-hover:scale-110 transition-transform duration-300">
+                    2
+                </div>
+<div class="text-[0.6rem] uppercase tracking-widest text-text-muted font-semibold">Finalistas</div>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden bg-data-texture bg-cover opacity-90">
+<div class="absolute inset-0 bg-gradient-to-br from-charcoal/80 to-base-dark/80 z-0"></div>
+<div class="relative z-10">
+<p class="text-[0.6rem] uppercase tracking-widest text-text-muted font-semibold mb-3">Core Competencies</p>
+<blockquote class="text-xl md:text-2xl font-display italic text-text-light leading-relaxed mb-6 border-l-4 border-accent-gold pl-4">
+<span class="highlight-word">Proativo</span>, <span class="highlight-word">organizado</span> e focado em <span class="highlight-word">melhoria contínua</span>.
+            </blockquote>
+<p class="text-sm text-text-light/90 mb-4">
+                Busca-se um profissional para a gestão de suporte com experiência em <span class="highlight-subtle">Inteligência Artificial</span> para otimização do atendimento e expertise em <span class="highlight-subtle">análise de dados</span> para estruturação de dashboards estratégicos.
+            </p>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden lg:col-span-1">
+<div class="absolute inset-0 bg-gradient-to-tl from-accent-gold/10 to-transparent z-0"></div>
+<div class="relative z-10">
+<p class="text-[0.6rem] uppercase tracking-widest text-text-muted font-semibold mb-3">Technical Leadership</p>
+<p class="text-sm text-text-light/90 mb-6">
+                A posição de Head de Tecnologia exige um profissional com <span class="highlight-subtle">background técnico sólido</span> e comprovada experiência em <span class="highlight-subtle">desenvolvimento de software em escala</span>, preferencialmente com processos baseados em <span class="highlight-word">Kanban</span>.
+            </p>
+<div class="text-xs text-text-muted border-t border-surface-dark/50 pt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-accent-gold">science</span>
+<span>AI-driven insights required.</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden lg:col-span-2">
+<div class="absolute inset-0 bg-gradient-to-br from-accent-coral/10 to-transparent z-0"></div>
+<div class="relative z-10">
+<p class="text-[0.6rem] uppercase tracking-widest text-text-muted font-semibold mb-3">Strategic Challenges</p>
+<ul class="list-disc list-inside text-sm text-text-light/90 space-y-2 mb-6 pl-2">
+<li><span class="highlight-subtle">Crescimento da base de clientes</span>: Expandir a capilaridade da plataforma.</li>
+<li><span class="highlight-subtle">Redução do Churn</span>: Implementar estratégias para retenção.</li>
+<li><span class="highlight-subtle">Modernização da aplicação</span>: Evoluir a stack tecnológica e arquitetura.</li>
+<li><span class="highlight-subtle">Lançamento de novos produtos</span>: Impulsionar a inovação em experiência digital.</li>
+</ul>
+<div class="text-xs text-text-muted border-t border-surface-dark/50 pt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-accent-coral">rocket_launch</span>
+<span>Driving innovation and market expansion.</span>
+</div>
+</div>
+</div>
+</div>
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-accent-coral hover:bg-accent-gold text-white rounded-full shadow-lg shadow-accent-coral/30 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 z-50">
+<span class="material-symbols-outlined fill-1">chat</span>
+</button>
+</main>
+</div>
+<script>
+        // Simple script to toggle dark mode for demonstration purposes
+        // As per the prompt, the 'dark' class is already applied to the HTML tag.
+        // The toggle button in the sidebar will not be functional as no JS is allowed.
+    </script>
+
+</body></html>

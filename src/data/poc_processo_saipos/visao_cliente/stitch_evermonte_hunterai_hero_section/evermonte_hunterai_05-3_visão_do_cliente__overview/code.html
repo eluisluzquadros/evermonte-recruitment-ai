@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evermonte HunterAI - Overview</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#EAB308", // Yellow/Gold from the screenshot active state
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0B1120", // Deep dark blue/black
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E293B",
+                        "sidebar-bg": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 flex h-screen overflow-hidden font-sans">
+<aside class="w-64 bg-sidebar-bg text-white flex-shrink-0 flex flex-col justify-between border-r border-slate-800 z-20">
+<div class="p-6">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-2">
+<div class="bg-slate-700 p-1.5 rounded-lg">
+<span class="material-icons-round text-primary text-xl">business_center</span>
+</div>
+<div class="leading-none">
+<h1 class="font-bold text-lg tracking-tight">Evermonte</h1>
+<span class="text-[10px] text-slate-400 block uppercase tracking-wider">Recruitment AI</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-white transition-colors">
+<span class="material-icons-round text-sm">dark_mode</span>
+</button>
+</div>
+<div class="bg-slate-800/50 rounded-xl p-3 flex items-center gap-3 mb-8 border border-slate-700/50">
+<div class="h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center text-xs font-bold text-white">
+                    EL
+                </div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-semibold truncate">Everton Luis Luz ...</p>
+<p class="text-[10px] text-slate-400 truncate">eluzquadros@gmail....</p>
+</div>
+<span class="material-icons-round text-slate-400 text-sm">logout</span>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<span class="material-icons-round text-lg group-hover:text-primary transition-colors">dashboard</span>
+                    Dashboard
+                </a>
+<div class="pt-4 pb-2">
+<p class="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Processo Seletivo</p>
+</div>
+<a class="flex items-center justify-between px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons-round text-lg">grid_view</span>
+                        Alinhamento
+                    </div>
+<span class="material-icons-round text-green-500 text-xs">check</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons-round text-lg">people</span>
+                        Entrevistas
+                    </div>
+<span class="bg-yellow-500/20 text-yellow-500 text-[10px] font-bold px-1.5 py-0.5 rounded">2</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons-round text-lg">description</span>
+                        Shortlist
+                    </div>
+<span class="bg-yellow-500/20 text-yellow-500 text-[10px] font-bold px-1.5 py-0.5 rounded">2</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons-round text-lg">radio_button_checked</span>
+                        Decisão
+                    </div>
+<span class="material-icons-round text-green-500 text-xs">check</span>
+</a>
+<div class="pt-6 pb-2">
+<p class="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Apresentação</p>
+</div>
+<a class="flex items-center gap-3 px-3 py-3 text-sm font-medium text-primary bg-slate-800/40 border border-primary/30 rounded-lg shadow-sm" href="#">
+<span class="material-icons-round text-lg">monitor</span>
+                    Visão do Cliente
+                </a>
+</nav>
+</div>
+<div class="p-6">
+<p class="text-[10px] text-slate-600 font-medium uppercase tracking-wider text-center">Powered by Gemini 2.0 Flash</p>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto relative bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto p-8 lg:p-12">
+<div class="mb-10">
+<div class="flex items-center gap-4">
+<div class="h-10 w-1.5 bg-background-dark dark:bg-white rounded-full"></div>
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight uppercase">Overview</h1>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-24">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="mb-5">
+<span class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold uppercase tracking-wide">
+                            A Companhia
+                        </span>
+</div>
+<p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                        A Saipos foi fundada em 2017, sendo o segundo empreendimento dos sócios após a venda da Devorando para o iFood. Possui uma estrutura executiva com quatro founders, três deles em posições de C-level. Kenner Grings é responsável por produto, tecnologia e suporte. Anderson cuida da área de CRO (vendas e receita), e Bruno atua como CEO, supervisionando people, financeiro, implantação e CS. A empresa valoriza a autonomia operacional, mesmo com o iFood como acionista majoritário. A cultura interna é de complementaridade entre os sócios, que conseguem 'brigar e se divertir no mesmo dia'.
+                    </p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="mb-5">
+<span class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold uppercase tracking-wide">
+                            Diferenciais Competitivos
+                        </span>
+</div>
+<p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                        A Saipos atua no mercado de bares e restaurantes, um setor altamente fragmentado com muitos players regionais. Seus principais concorrentes são Links, Totus, Colibri, Consumer, Yoga, Cardápio Web e Vuca Delivery. A empresa se diferencia por ser um sistema 100% em nuvem e online, com capilaridade nacional e foco em restaurantes que faturam entre R$ 70.000 e R$ 500.000. A Saipos busca se posicionar como um novo líder de mercado, visando atender 100.000 restaurantes.
+                    </p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="mb-5">
+<span class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold uppercase tracking-wide">
+                            Contexto da Vaga
+                        </span>
+</div>
+<p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                        A Saipos está buscando um profissional para a Gestão de Suporte e um Head de Tecnologia. O Gestor de Suporte será responsável por tornar o suporte uma área de promoção da empresa, focando em melhoria contínua, redução do churn e aprimoramento da experiência do cliente. O Head de Tecnologia terá como desafio a modernização e a garantia da escala da aplicação para 50.000 clientes, além de agilizar o desenvolvimento de software e lançar novos produtos de experiência digital em ciclo curto e com qualidade.
+                    </p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="mb-5">
+<span class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold uppercase tracking-wide">
+                            O Desafio
+                        </span>
+</div>
+<p class="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                        Objetivo principal é estruturar e escalar a área, garantindo alinhamento cultural e entrega de resultados de curto prazo.
+                    </p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50">
+<div class="bg-slate-800 text-white rounded-xl shadow-2xl p-4 flex items-center gap-4 min-w-[300px] border border-slate-700">
+<div class="h-10 w-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-icons-round text-white">smart_toy</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm">Evermonte Assistant</h3>
+<p class="text-[10px] text-slate-400">Powered by Gemini 3.0 Pro</p>
+</div>
+<div class="flex gap-2 text-slate-400">
+<button class="hover:text-white"><span class="material-icons-round text-sm">open_in_full</span></button>
+<button class="hover:text-white"><span class="material-icons-round text-sm">close</span></button>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>
