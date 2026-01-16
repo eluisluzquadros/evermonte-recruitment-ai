@@ -256,7 +256,8 @@ jobs:
 ## 📋 Próximos Passos Imediatos
 
 1. **Concluído:** Inicialização do Git e Deploy Produção
-2. **Hoje:** Configurar Vitest e escrever primeiros testes
+2. **Concluído:** Correção Crítica - API Key Security & Restauração de Serviço AI
+3. **Hoje:** Configurar Vitest e escrever primeiros testes
 3. **Amanhã:** Error boundaries e toasts
 4. **Esta semana:** Mobile responsiveness
 

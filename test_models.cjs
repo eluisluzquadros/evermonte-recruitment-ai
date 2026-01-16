@@ -1,7 +1,8 @@
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const apiKey = "AIzaSyCjsJ_X8oQKbxYSybpxEJ0QOfzC778aBIk";
+require('dotenv').config();
+const apiKey = process.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const modelsToTest = [
