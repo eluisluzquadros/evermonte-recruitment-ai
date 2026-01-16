@@ -20,6 +20,7 @@ import { useAuth } from '../hooks/useAuth';
 import { loadProjectState, saveProjectState, AppState } from '../services/persistenceService';
 import { ChatMessage } from '../services/chatService';
 import { useProjects } from '../hooks/useProjects';
+import GlobalChatAssistant from './GlobalChatAssistant';
 
 export const ProjectContainer = () => {
     const { projectId } = useParams<{ projectId: string }>();
@@ -147,99 +148,108 @@ export const ProjectContainer = () => {
     };
 
     return (
-        <Routes>
-            <Route path="dashboard" element={
-                <Layout {...layoutProps}>
-                    <DashboardKanban
+        <>
+            <Routes>
+                <Route path="dashboard" element={
+                    <Layout {...layoutProps}>
+                        <DashboardKanban
+                            candidates={candidates}
+                            shortlist={shortlist}
+                            phase4Result={phase4Result}
+                            phase5Result={phase5Result}
+                            phase1Data={phase1Data}
+                            projectId={projectId}
+                            funnelData={appState.funnelData}
+                        />
+                    </Layout>
+                } />
+                <Route path="kanban" element={
+                    <Layout {...layoutProps}>
+                        <DashboardKanban
+                            candidates={candidates}
+                            shortlist={shortlist}
+                            phase4Result={phase4Result}
+                            phase5Result={phase5Result}
+                            phase1Data={phase1Data}
+                            funnelData={appState.funnelData}
+                        />
+                    </Layout>
+                } />
+                <Route path="phase1" element={
+                    <Layout {...layoutProps}>
+                        <Phase1Alignment savedData={phase1Data} onComplete={setPhase1Data} projectId={projectId} initialCompanyName={projectInfo?.companyName} />
+                    </Layout>
+                } />
+                <Route path="phase2" element={
+                    <Layout {...layoutProps}>
+                        <Phase2Interview
+                            onCandidateEvaluated={handleCandidateEvaluated}
+                            candidates={candidates}
+                            projectId={projectId}
+                        />
+                    </Layout>
+                } />
+                <Route path="phase3" element={
+                    <Layout {...layoutProps}>
+                        <Phase3Shortlist candidates={candidates} shortlist={shortlist} onShortlistFinalized={setShortlist} projectId={projectId} />
+                    </Layout>
+                } />
+                <Route path="phase4" element={
+                    <Layout {...layoutProps}>
+                        <Phase4Decision
+                            shortlist={shortlist}
+                            phase1Data={phase1Data}
+                            phase2Data={candidates.map(c => c.fullPhase2)}
+                            onDecisionGenerated={setPhase4Result}
+                            savedResult={phase4Result}
+                            projectId={projectId}
+                        />
+                    </Layout>
+                } />
+                <Route path="phase5" element={
+                    <Layout {...layoutProps}>
+                        <Phase5References
+                            candidates={candidates}
+                            shortlist={shortlist}
+                            savedData={phase5Result}
+                            projectId={projectId}
+                            onReferenceEvaluated={(result) => {
+                                setPhase5Result(result);
+                            }}
+                        />
+                    </Layout>
+                } />
+
+                {/* Report Sub-routes */}
+                <Route path="report/cover" element={<ReportCover appState={appState} />} />
+                <Route path="report/overview" element={<ClientDashboardOverview appState={appState} />} />
+                <Route path="report/position" element={<ClientPositionOverview appState={appState} />} />
+                <Route path="report/finalists" element={<ClientDashboardFinalists appState={appState} />} />
+                <Route path="report/candidate/:id" element={<ClientCandidateDetail appState={appState} />} />
+                <Route path="report/comparative" element={<ClientComparativeReport appState={appState} />} />
+                <Route path="report/backcover" element={<ReportBackCover />} />
+                {/* Default /report redirects to cover page */}
+                <Route path="report" element={<ReportCover appState={appState} />} />
+
+                {/* Default redirect to Dashboard if just /projects/:id accessed */}
+                <Route path="" element={
+                    <WorkspaceRecruitmentDashboard
+                        phase1Data={phase1Data}
                         candidates={candidates}
                         shortlist={shortlist}
                         phase4Result={phase4Result}
                         phase5Result={phase5Result}
-                        phase1Data={phase1Data}
-                        projectId={projectId}
-                        funnelData={appState.funnelData}
+                        projectInfo={projectInfo}
                     />
-                </Layout>
-            } />
-            <Route path="kanban" element={
-                <Layout {...layoutProps}>
-                    <DashboardKanban
-                        candidates={candidates}
-                        shortlist={shortlist}
-                        phase4Result={phase4Result}
-                        phase5Result={phase5Result}
-                        phase1Data={phase1Data}
-                        funnelData={appState.funnelData}
-                    />
-                </Layout>
-            } />
-            <Route path="phase1" element={
-                <Layout {...layoutProps}>
-                    <Phase1Alignment savedData={phase1Data} onComplete={setPhase1Data} projectId={projectId} initialCompanyName={projectInfo?.companyName} />
-                </Layout>
-            } />
-            <Route path="phase2" element={
-                <Layout {...layoutProps}>
-                    <Phase2Interview
-                        onCandidateEvaluated={handleCandidateEvaluated}
-                        candidates={candidates}
-                        projectId={projectId}
-                    />
-                </Layout>
-            } />
-            <Route path="phase3" element={
-                <Layout {...layoutProps}>
-                    <Phase3Shortlist candidates={candidates} shortlist={shortlist} onShortlistFinalized={setShortlist} projectId={projectId} />
-                </Layout>
-            } />
-            <Route path="phase4" element={
-                <Layout {...layoutProps}>
-                    <Phase4Decision
-                        shortlist={shortlist}
-                        phase1Data={phase1Data}
-                        phase2Data={candidates.map(c => c.fullPhase2)}
-                        onDecisionGenerated={setPhase4Result}
-                        savedResult={phase4Result}
-                        projectId={projectId}
-                    />
-                </Layout>
-            } />
-            <Route path="phase5" element={
-                <Layout {...layoutProps}>
-                    <Phase5References
-                        candidates={candidates}
-                        shortlist={shortlist}
-                        savedData={phase5Result}
-                        projectId={projectId}
-                        onReferenceEvaluated={(result) => {
-                            setPhase5Result(result);
-                        }}
-                    />
-                </Layout>
-            } />
-
-            {/* Report Sub-routes */}
-            <Route path="report/cover" element={<ReportCover appState={appState} />} />
-            <Route path="report/overview" element={<ClientDashboardOverview appState={appState} />} />
-            <Route path="report/position" element={<ClientPositionOverview appState={appState} />} />
-            <Route path="report/finalists" element={<ClientDashboardFinalists appState={appState} />} />
-            <Route path="report/candidate/:id" element={<ClientCandidateDetail appState={appState} />} />
-            <Route path="report/comparative" element={<ClientComparativeReport appState={appState} />} />
-            <Route path="report/backcover" element={<ReportBackCover />} />
-            {/* Default /report redirects to cover page */}
-            <Route path="report" element={<ReportCover appState={appState} />} />
-
-            {/* Default redirect to Dashboard if just /projects/:id accessed */}
-            <Route path="" element={
-                <WorkspaceRecruitmentDashboard
-                    phase1Data={phase1Data}
-                    candidates={candidates}
-                    shortlist={shortlist}
-                    phase4Result={phase4Result}
-                    phase5Result={phase5Result}
-                    projectInfo={projectInfo}
-                />
-            } />
-        </Routes>
+                } />
+            </Routes>
+            <GlobalChatAssistant
+                appState={appState}
+                chatHistory={chatHistory}
+                onHistoryChange={setChatHistory}
+                projectId={projectId}
+                allProjects={projects}
+            />
+        </>
     );
 };

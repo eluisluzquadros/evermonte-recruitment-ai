@@ -195,7 +195,14 @@ const GlobalChatAssistant: React.FC<Props> = ({ appState, chatHistory, onHistory
                                             <Sparkles className="w-3 h-3" /> AI Analysis
                                         </div>
                                     )}
-                                    <div className="prose prose-sm dark:prose-invert max-w-none leading-relaxed prose-p:my-1 prose-headings:mb-2 prose-headings:mt-4 prose-ul:my-2 prose-li:my-0.5">
+                                    <div
+                                        className={cn(
+                                            "prose prose-sm max-w-none leading-relaxed prose-p:my-1 prose-headings:mb-2 prose-headings:mt-4 prose-ul:my-2 prose-li:my-0.5",
+                                            msg.role === 'user'
+                                                ? "text-primary-foreground [&_p]:text-primary-foreground [&_h1]:text-primary-foreground [&_h2]:text-primary-foreground [&_h3]:text-primary-foreground [&_strong]:text-primary-foreground [&_li]:text-primary-foreground"
+                                                : "dark:prose-invert"
+                                        )}
+                                    >
                                         <ReactMarkdown>
                                             {msg.text}
                                         </ReactMarkdown>

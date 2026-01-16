@@ -16,6 +16,8 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { useProjects, Project } from '../hooks/useProjects';
 import { useAuth } from '../hooks/useAuth';
 import { exportProjectToExcel, exportMultipleProjects, ExportProject, exportProjectToJSON, exportProjectToCSV } from '../utils/excelExporter';
+import GlobalChatAssistant from '../components/GlobalChatAssistant';
+import { ChatMessage } from '../services/chatService';
 
 // Pipeline phases for the stepper
 const PIPELINE_PHASES = [
@@ -478,8 +480,12 @@ const WorkspaceCard: React.FC<{
 // Main Dashboard Component
 export const ProjectsDashboard = () => {
   const { user, logout } = useAuth();
+
   const { projects, loading, createProject, updateProject, deleteProject } = useProjects(user?.uid || null);
   const navigate = useNavigate();
+
+  // Chat State
+  const [chatHistory, setChatHistory] = React.useState<ChatMessage[]>([]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'paused' | 'completed'>('all');
@@ -736,6 +742,17 @@ export const ProjectsDashboard = () => {
         onSubmit={handleCreateOrUpdateProject}
         isLoading={isSaving}
         initialData={editingProject}
+      />
+      <GlobalChatAssistant
+        appState={{
+          phase1Data: null,
+          candidates: [],
+          shortlist: [],
+          phase4Result: null
+        }}
+        chatHistory={chatHistory}
+        onHistoryChange={setChatHistory}
+        allProjects={projects}
       />
     </div>
   );

@@ -64,15 +64,24 @@ export const createChatSession = (
         PROJETO: ${p.companyName} (${p.roleName})
         ID: ${p.id}
         Status: ${p.status}
-        Mapeados: ${p.funnelMappedCount || 0}
-        Abordados: ${p.funnelApproachedCount || 0}
-        Candidatos no Pipeline: ${p.candidatesCount || 0}
-        Shortlist: ${p.shortlistCount || 0}
+        Mapeados: ${p.funnelMappedCount || 0} | Abordados: ${p.funnelApproachedCount || 0}
+        
+        [RESUMO DO ALINHAMENTO/VAGA]
+        ${p.phase1Data ? `
+          - Principais Desafios: ${p.phase1Data.mainChallenges || "N/A"}
+          - Objetivos da Vaga: ${p.phase1Data.jobObjectives || "N/A"}
+          - Experiência Ideal: ${p.phase1Data.idealExperience || "N/A"}
+          - Perfil: ${p.phase1Data.idealCoreSkills?.join(', ') || "N/A"}
+        ` : "Dados de alinhamento não preenchidos."}
+        
+        [CANDIDATOS]
+        Finalistas/Shortlist: ${p.shortlistCount || 0}
+        Total no Pipeline: ${p.candidatesCount || 0}
         ---
       `).join('\n')}
       
-      O usuário pode perguntar sobre qualquer um desses projetos ou pedir uma comparação geral. 
-      Se ele perguntar sobre um projeto específico, use o ID ou nome para identificar.
+      O usuário pode perguntar sobre qualquer um desses projetos. Você tem acesso aos detalhes principais da vaga (Fase 1) acima.
+      Se ele perguntar "resuma a reunião de alinhamento da Imbralit", busque no bloco PROJETO da Imbralit os dados de "RESUMO DO ALINHAMENTO".
     `;
   }
 

@@ -25,7 +25,7 @@ import { useAuth } from './hooks/useAuth';
 import { loadAppState, saveAppState, AppState } from './services/persistenceService';
 import { ChatMessage } from './services/chatService';
 import { useProjects } from './hooks/useProjects';
-import GlobalChatAssistant from './components/GlobalChatAssistant';
+
 
 function App() {
   const { user, loading, logout, signInWithGoogle } = useAuth();
@@ -139,14 +139,7 @@ function App() {
         {/* Redirect unknown routes to Landing or Projects */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {user && location.pathname !== '/' && (
-        <GlobalChatAssistant
-          appState={appState}
-          chatHistory={chatHistory}
-          onHistoryChange={setChatHistory}
-          allProjects={allProjects}
-        />
-      )}
+
     </>
   );
 }

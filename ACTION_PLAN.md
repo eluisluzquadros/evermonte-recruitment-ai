@@ -18,6 +18,8 @@ O sistema Evermonte Recruitment AI está **funcionalmente completo** para uso in
 - ✅ Pre-fill Company Name - Nome da empresa preenchido automaticamente na Fase 1
 - ✅ Subtitle i18n - Suporte a tradução do subtítulo (EN/PT)
 - ✅ Light Mode Contrast - Melhoria no contraste da seção "Our Offices"
+- ✅ Chatbot Context Enhancement - Contexto global e de projeto corrigido
+- ✅ Chatbot UI Fix - Legibilidade de texto em Light Mode corrigida
 
 **Áreas de melhoria restantes:**
 1. **Qualidade de Código** - Testes automatizados e refatorações
